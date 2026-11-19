@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "FoxBridge — Firefox для Claude Code",
+  "version": "1.1.1",
+  "description": "Неофициальный мост: даёт Claude Code работать в Firefox — читать страницы, нажимать, вводить текст, делать скриншоты. Связь только с этим компьютером (127.0.0.1). Пароли не вводит.",
+  "icons": {
+    "48": "icons/on.svg",
+    "96": "icons/on.svg"
+  },
+  "browser_action": {
+    "default_icon": "icons/off.svg",
+    "default_title": "FoxBridge выключен — нажмите, чтобы включить"
+  },
+  "background": {
+    "scripts": [
+      "bg.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "notifications",
+    "storage"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "foxbridge@alamanss",
+      "strict_min_version": "115.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "homepage_url": "https://github.com/Alamanss/foxbridge"
+}
